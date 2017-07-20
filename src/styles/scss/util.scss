@@ -1,0 +1,49 @@
+@mixin border-radius ($number1, $number2: $number1, $number3: $number1, $number4: $number1) {
+  -webkit-border-top-left-radius:     $number1;
+  -webkit-border-top-right-radius:    $number2;
+  -webkit-border-bottom-left-radius:  $number3;
+  -webkit-border-bottom-right-radius: $number4;
+  -moz-border-top-left-radius:        $number1;
+  -moz-border-top-right-radius:       $number2;
+  -moz-border-bottom-left-radius:     $number3;
+  -moz-border-bottom-right-radius:    $number4;
+  border-top-left-radius:             $number1;
+  border-top-right-radius:            $number2;
+  border-bottom-left-radius:          $number3;
+  border-bottom-right-radius:         $number4;
+}
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow:    $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow:         $shadows;
+}
+
+@mixin transform($values...) {
+  -webkit-transform:  $values;
+  -moz-transform:     $values;
+  -ms-transform:      $values;
+  -o-transform:       $values;
+  transform:          $values;
+}
+
+@mixin transition($values...) {
+  -webkit-transition: $values;
+  -moz-transition:    $values;
+  -ms-transition:     $values;
+  -o-transition:      $values;
+  transition:         $values;
+}
+
+@mixin animation($values...) {
+  -webkit-animation:  $values;
+  -moz-animation:     $values;
+  -o-animation:       $values;
+  animation:          $values;
+}
+
+@mixin filter($values...) {
+  -webkit-filter: $values;
+  -ms-filter:     $values;
+  filter:         $values;
+}

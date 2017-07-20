@@ -2,17 +2,17 @@
 
 require('core-js/fn/object/assign');
 const webpack = require('webpack');
-const webpackDevServer = require('webpack-dev-server');
+const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 const open = require('open');
 
-console.log(config);
-new webpackDevServer(webpack(config), config.devServer)
-.listen(config.port, 'localhost', (err) => {
+new WebpackDevServer(webpack(config), config.devServer)
+.listen(config.devServer.port, 'localhost', (err) => {
     if (err) {
-        console.log(err);
+      console.log(err);
     }
-    console.log('Listening at localhost:' + config.port);
+    console.log('Listening at localhost:' + config.devServer.port);
     console.log('Openng your system brower ... ');
-    open('http://localhost:' + config.port + '/webpack-dev-server')
-})
+    // 日日日日日日日日日日日日日日，/webpack-dev-server/ 后面有斜杠
+    open('http://localhost:' + config.devServer.port + '/webpack-dev-server/');
+});

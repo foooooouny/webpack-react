@@ -3,7 +3,7 @@
 const path = require('path'); // node 原生 path 模块
 const args = require('minimist')(process.argv.slice(2));
 
-const allowedEnvs = ['dev', 'dlist', 'test'];
+const allowedEnvs = ['dev', 'dist', 'test'];
 
 let env;
 
